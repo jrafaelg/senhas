@@ -42,7 +42,7 @@ def gerar_senha_aleatoria(tamanho: int = 10,
 def gerar_senha_frase(num_palavras: int = 4,
                       palavras_completas: bool = True,
                       separador: str = '-',
-                      minuscula: bool = False) -> str:
+                      maiusculas: bool = False) -> str:
     if num_palavras < 1:
         return None
 
@@ -55,7 +55,7 @@ def gerar_senha_frase(num_palavras: int = 4,
     rng = secrets.SystemRandom()
     palavras = rng.choices(lista, k=num_palavras)
 
-    if minuscula:
+    if maiusculas:
         p = secrets.randbelow(num_palavras)
         palavras[p] = palavras[p].upper()
 
