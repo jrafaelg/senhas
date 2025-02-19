@@ -17,6 +17,8 @@ def gerar_senha_aleatoria(tamanho: int = 10,
         'simbolos': string.punctuation
     }
 
+    print(locals())
+
     cateorias_ativas = {
         k: v for k, v in cateorias.items() if locals()[k]
     }
@@ -42,7 +44,7 @@ def gerar_senha_aleatoria(tamanho: int = 10,
 def gerar_senha_frase(num_palavras: int = 4,
                       palavras_completas: bool = True,
                       separador: str = '-',
-                      maiusculas: bool = False) -> str:
+                      maiusculas: bool = False) -> Optional[str]:
     if num_palavras < 1:
         return None
 
