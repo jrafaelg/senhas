@@ -17,7 +17,7 @@ def gerar_senha_aleatoria(tamanho: int = 10,
         'simbolos': string.punctuation
     }
 
-    print(locals())
+    # print(locals())
 
     cateorias_ativas = {
         k: v for k, v in cateorias.items() if locals()[k]
